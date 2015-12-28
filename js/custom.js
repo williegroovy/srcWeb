@@ -10,10 +10,12 @@ $(document).ready(function() {
             console.log(active);
             if(active) {
                 $('#footer').slideDown();
+                $('#extra').html("");
             }
 
             if(!active) {
                 console.log("Not true");
+                $('#extra').html("<p>test</p>");
                 //$('#footer').css('transform', 'translateY(-300px)');
                   active = true;
                 }
