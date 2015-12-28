@@ -6,8 +6,10 @@
 
         <!-- Style Sheets -->
         <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link href="css/toastr.css" rel="stylesheet" />
         <link href="css/app.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
 
         <!-- Library Scripts -->
         <script src="js/jquery-1.11.3.min.js"></script>
@@ -36,9 +38,19 @@
 
     <body ng-app="pageManagement">
 
+
         <section id="top" style="transform: translateY(0px);">
-            <div class="container" id="main" style="opacity:1">
-                Content Goes Here!!!
+
+            <nav class="navbar navbar-default transparent fade-out">
+                <div class="container-fluid">
+                    <button type="button" id="btn" class="navbar-toggle collapsed" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <p>MENU</p><i class="fa fa-bars fa-2x"></i>
+                    </button>
+                    <a class="navbar-brand" href="#"><img id="nav-logo" src="img/src_logo.gif"></a>
+                </div>
+            </nav>
+
+            <div class="container" id="" style="opacity:1">
             </div>
         </section>
 
@@ -50,7 +62,7 @@
 
         <section id="footer">
             <div class="container">
-                <p>Footer content here, resizes to whatever size, but need to change translateY()</p>
+                <p>&copy 2016 Solid Rock Church. All Rights Reserved. 5050 Pinson Valley Pkwy Birmingham, AL 35215 (205)681-5551 <a href="mailto:src@solidrockchurch.com">src@solidrockchurch.com</a></p>
             </div>
         </section>
 
