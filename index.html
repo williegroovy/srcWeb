@@ -38,15 +38,15 @@
 
     <body ng-app="pageManagement">
 
-
+    <div id="main-content" onwhe>
         <section id="top" style="transform: translateY(0px);">
 
             <nav class="navbar navbar-default transparent fade-out">
                 <div class="container-fluid">
-                    <button type="button" id="btn" class="navbar-toggle collapsed" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <button type="button" class="pull-right" id="btn">
                         <p>MENU</p><i class="fa fa-bars fa-2x"></i>
                     </button>
-                    <a class="navbar-brand" href="#"><img id="nav-logo" src="img/src_logo.gif"></a>
+                    <a class="navbar-brand" href="#"><img id="nav-logo" src="img/s5_logo.png"></a>
                 </div>
             </nav>
 
@@ -54,9 +54,21 @@
             </div>
         </section>
 
-        <section id="bottom" style="transform: translateY(0px);">
-            <div class="container">
-                This is the final section!
+        <<section id="bottom" style="transform: translateY(0px);" ui-view="bottom">
+
+        </section>
+
+        <section id="footer" ui-view="footer">
+
+        </section>
+    </div>
+
+        <!--section id="bottom" style="transform: translateY(0px);">
+            <div class="container-fluid bottom-container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-8">col-xs-12 col-md-8</div>
+                    <div class="col-xs-6 col-md-4">col-xs-6 col-md-4</div>
+                </div>
             </div>
         </section>
 
@@ -68,6 +80,6 @@
 
         <div id="extra">
 
-        </div>
+        </div-->
     </body>
 </html>

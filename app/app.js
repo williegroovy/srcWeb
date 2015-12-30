@@ -18,13 +18,26 @@
                     //Landing Page
                     .state("home", {
                         url: "/",
-                        templateUrl: "app/landing.html"
+                            views: {
+                                'body': {
+                                    templateUrl: "app/landing.html"
+                                },
+
+                                'bottom': {
+                                    templateUrl: "app/bottom.html"
+                                },
+
+                                'footer': {
+                                    templateUrl: "app/footer.html"
+                                }
+                            }
+
                     })
 
-                        .state("login", {
-                            url: "/login",
-                            templateUrl: "app/login.html"
-                        })
+                    .state("login", {
+                        url: "/login",
+                        templateUrl: "app/login.html"
+                    })
                 }]
     );
 }());
