@@ -23,6 +23,10 @@
                                     templateUrl: "app/landing.html"
                                 },
 
+                                'right': {
+                                    templateUrl: "app/right.html"
+                                },
+
                                 'bottom': {
                                     templateUrl: "app/bottom.html"
                                 },

@@ -4,6 +4,7 @@ html, body{
     margin: 0;
     padding: 0;
     background: #1B1B1B;
+    display: block;
     overflow: hidden;
 }
 
@@ -16,8 +17,11 @@ html, body{
     transition: opacity 1s ease-out;
 }
 
-.fa {
-    color: #fff;
+#close-btn {
+    padding-top: 40px;
+    padding-right: 40px;
+    float: right;
+    color: white;
 }
 
 #btn {
@@ -32,6 +36,7 @@ html, body{
     font-weight: bold;
     font-size: 1.5em;
     display: inline;
+    margin-top: -10px;
     margin-right: 10px;
 }
 
@@ -93,6 +98,17 @@ html, body{
     background: url(../img/src_worship_bg.jpg) no-repeat center center / cover fixed;
     height: 100%;
     width: 100%;
+    transition: .7s;
+    z-index: 1001;
+}
+
+#right {
+    background: #262626;
+    position: absolute;
+    display: block;
+    width: 360px;
+    height: 100%;
+    transform: translate3d(100vw, 0, 0);
     transition: .7s;
 }
 

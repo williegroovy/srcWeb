@@ -38,13 +38,15 @@
 
     <body ng-app="pageManagement">
 
+    <section id="right" ui-view="right"></section>
+
     <div id="main-content">
-        <section id="top" style="transform: translateY(0px);">
+        <section id="top">
 
             <nav class="navbar navbar-default transparent fade-out">
                 <div class="container-fluid">
                     <button type="button" class="pull-right" id="btn">
-                        <p>MENU</p><i class="fa fa-bars fa-2x"></i>
+                        <p>MENU</p><i id="menu" class="fa fa-bars fa-2x"></i>
                     </button>
                     <a class="navbar-brand" href="#"><img id="nav-logo" src="img/s5_logo.png"></a>
                 </div>
@@ -53,14 +55,9 @@
             <div class="container" id="" style="opacity:1">
             </div>
         </section>
+        <section id="bottom" ui-view="bottom"></section>
+        <section id="footer" ui-view="footer"></section>
 
-        <section id="bottom" style="transform: translateY(0px);" ui-view="bottom">
-
-        </section>
-
-        <section id="footer" ui-view="footer">
-
-        </section>
     </div>
     </body>
 </html>
