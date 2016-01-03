@@ -5,12 +5,12 @@ html, body{
     padding: 0;
     background: #1B1B1B;
     display: block;
-    overflow: hidden;
 }
 
 #main-content {
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
 .container {
@@ -102,14 +102,21 @@ html, body{
     z-index: 1001;
 }
 
+.menu-container {
+    float: left;
+    color: white;
+    padding-top: 40px;
+    padding-left: 40px;
+}
+
 #right {
     background: #262626;
     position: absolute;
-    display: block;
+    display: none;
     width: 360px;
     height: 100%;
-    transform: translate3d(100vw, 0, 0);
-    -webkit-transform: translate3d(100vw, 0, 0);
+    transform: translate3d(100vw, 0, 0) translateX(0px);
+    -webkit-transform: translate3d(100vw, 0, 0) translateX(0px);
     transition: .7s;
 }
 

@@ -40,9 +40,8 @@
 
     <section id="right" ui-view="right"></section>
 
-    <div id="main-content">
+    <div id="main-content" class="disable-scrolling">
         <section id="top">
-
             <nav class="navbar navbar-default transparent fade-out">
                 <div class="container-fluid">
                     <button type="button" class="pull-right" id="btn">
@@ -55,8 +54,8 @@
             <div class="container" id="" style="opacity:1">
             </div>
         </section>
-        <section id="bottom" ui-view="bottom"></section>
-        <section id="footer" ui-view="footer"></section>
+        <section id="bottom" ui-view="bottom" class="disable-scrolling"></section>
+        <section id="footer" ui-view="footer" class="disable-scrolling"></section>
 
     </div>
     </body>
