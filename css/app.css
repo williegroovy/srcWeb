@@ -4,6 +4,12 @@ html, body{
     margin: 0;
     padding: 0;
     background: #1B1B1B;
+    overflow: hidden;
+}
+
+#main-content {
+    height: 100%;
+    width: 100%;
 }
 
 .container {
@@ -40,7 +46,6 @@ html, body{
     background-color: transparent;
     border: none;
 }
-
 
 #btn:focus {
     outline: 0;
@@ -107,12 +112,10 @@ html, body{
 
 #footer {
     background: #1B1B1B;
-    position: fixed;
     width: 100%;
     height: auto;
-    bottom: 0px;
-    display: none;
-    z-index: 2;
+    z-index: 3;
+    transition: .7s;
 }
 
 #footer p {
@@ -123,9 +126,8 @@ html, body{
     color: #818181;
     font-family: 'Open Sans';
     font-size: 12px;
-    font-align: center;
     line-height: 22px;
-    margin: 0 auto;
+    margin: 0 0 0 0;
 }
 
 #footer p a:link {

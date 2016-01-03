@@ -1,7 +1,6 @@
 $(document).ready(function() {
     //$window = $(window);
-
-    //var active = false;
+    var del = 0;
 
     var mainContent = document.getElementById('main-content');
 
@@ -12,12 +11,44 @@ $(document).ready(function() {
         // Firefox
         mainContent.addEventListener("DOMMouseScroll",scrollFunction, false);
     }
-
+    var del;
 
     function scrollFunction(e) {
         var e = window.event || e;
         var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-        console.log(e + delta);
+        del = del + delta;
+
+
+        if(del < -2) {
+            del = -2;
+        }
+
+        if(del > 0) {
+            del = 0;
+        }
+
+        console.log(del);
+        if(del <= -1) {
+            console.log(del);
+            if(del == -2) {
+                $('#footer').css('transform', 'translateY(-470px)');
+                $('#bottom').css('transform', 'translateY(-462px)');
+                $('#top').css('transform', 'translateY(-262px)');
+            } else {
+                $('#footer').css('transform', 'translateY(-400px)');
+                $('#bottom').css('transform', 'translateY(-400px)');
+                $('#top').css('transform', 'translateY(-200px)');
+            }
+        } else {
+            if(del == -1) {
+                $('#footer').css('transform', 'translateY(0px)');
+                $('#top').css('transform', 'translateY(-200px)');
+                $('#bottom').css('transform', 'translateY(-400px)');
+            }else {
+                $('#bottom').css('transform', 'translateY(0px)');
+                $('#top').css('transform', 'translateY(0px)');
+            }
+        }
     }
 /*
     $(window).scroll(function() {
