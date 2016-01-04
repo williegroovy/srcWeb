@@ -20,14 +20,18 @@ $(document).ready(function() {
         url: 'https://new.livestream.com/api/accounts/srcbirmingham',
         dataType: 'json',
         success: function(results) {
-            console.log(results.past_events.data[0].full_name);
+            console.log("Success");
+            var image = results.past_events.data[1].logo.url;
+            console.log(image);
+            $('#video-list').prepend('<img src="'+image+'"/>');
+            //results.past_events.data.forEach(function(item) {
+            //    console.log(item.full_name);
+            //});
         }
     });
 
     $(document).bind('touchstart', function (e){
-
         ts = e.originalEvent.touches[0].clientY;
-        console.log(ts);
 
         if(ts < 100) {
             $('#main-content').removeClass('disable-scrolling');
