@@ -120,9 +120,42 @@ html, body{
     margin: 0 0 0 0;
 }
 
-#menu-list i {
+#menu-list li {
     margin-right: 10px;
 }
+
+#menu-list li a:link {
+    text-decoration: none;
+    color: white;
+}
+
+#menu-list li a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+#menu-list li:hover {
+    background-color: transparent;
+    text-decoration: none;
+    transition: opacity .5s;
+    opacity: .75;
+    border: none;
+}
+
+#menu-list li:active {
+    background-color: transparent;
+    border: none;
+}
+
+#menu-list li:focus {
+    outline: 0;
+}
+
+#menu-list li:hover {
+    transition: opacity .5s;
+    opacity: .75;
+}
+
 
 #right {
     background: #262626;

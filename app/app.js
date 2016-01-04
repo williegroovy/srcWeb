@@ -19,29 +19,53 @@
                     .state("home", {
                         url: "/",
                             views: {
-                                'body': {
-                                    templateUrl: "app/landing.html"
+                                'top': {
+                                    templateUrl: "app/top.html"
+                                },
+
+                                'menu@home': {
+                                    templateUrl: "app/static/navbar.html"
                                 },
 
                                 'right': {
-                                    templateUrl: "app/right.html"
+                                    templateUrl: "app/static/right.html"
                                 },
 
                                 'bottom': {
-                                    templateUrl: "app/bottom.html"
+                                    templateUrl: "app/static/bottom.html"
                                 },
 
                                 'footer': {
-                                    templateUrl: "app/footer.html"
+                                    templateUrl: "app/static/footer.html"
                                 }
                             }
 
                     })
 
-                    .state("login", {
-                        url: "/login",
-                        templateUrl: "app/login.html"
-                    })
+                        .state("archive", {
+                            url: "/archive",
+                                views: {
+                                    'top': {
+                                        templateUrl: "app/top.html"
+                                    },
+
+                                    'menu@archive': {
+                                        templateUrl: "app/static/navbar.html"
+                                    },
+
+                                    'right': {
+                                        templateUrl: "app/static/right.html"
+                                    },
+
+                                    'bottom': {
+                                        templateUrl: "app/static/bottom.html"
+                                    },
+
+                                    'footer': {
+                                        templateUrl: "app/static/footer.html"
+                                    }
+                                }
+                        })
                 }]
     );
 }());

@@ -43,20 +43,9 @@
     <section id="right" ui-view="right"></section>
 
     <div id="main-content" class="disable-scrolling">
-        <section id="top">
-            <nav class="navbar navbar-default transparent fade-out">
-                <div class="container-fluid">
-                    <button type="button" class="pull-right" id="btn">
-                        <p>MENU</p><i id="menu" class="fa fa-bars fa-2x"></i>
-                    </button>
-                    <a class="navbar-brand" href="#"><img id="nav-logo" src="img/s5_logo.png"></a>
-                </div>
-            </nav>
 
-            <div class="container" id="video-list" style="opacity:1">
+        <section id="top" ui-view="top"></section>
 
-            </div>
-        </section>
         <section id="bottom" ui-view="bottom" class="disable-scrolling"></section>
         <section id="footer" ui-view="footer" class="disable-scrolling"></section>
 

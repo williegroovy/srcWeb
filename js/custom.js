@@ -8,31 +8,50 @@ function insideClose() {
         }, 700);
 }
 
+$(document).on("click", ".menu-button", function(){
+    var position = $('#right').position();
+    if(position.left == 0) {
+        $('#menu').removeClass('fa-bars').addClass('fa-angle-double-right');
+        $('#right').css('display', 'block').css('transform', 'translate3d(100vw, 0, 0) translateX(-360px)').css('-webkit-transform', 'translate3d(100vw, 0, 0) translateX(-360px)');
+        $('#top').css('transform', 'translateX(-360px)').css('-webkit-transform', 'translateX(-360px)');
+    } else {
+        $('#menu').removeClass('fa-angle-double-right').addClass('fa-bars');
+        $('#top').css('transform', 'translateX(-0px)').css('-webkit-transform', 'translateX(-0px)');
+        setTimeout(
+            function() {
+                $('#right').css('display', 'none');
+                $('#right').css('transform', 'translate3d(100vw, 0, 0) translateX(0px)').css('-webkit-transform', 'translate3d(100vw, 0, 0) translateX(0px)');
+            }, 700);
+    }
+});
+
 $(document).ready(function() {
     var del = 0;
     var lastY;
     var ts;
-
-    //$.get('http://new.livestream.com/api/accounts/srcbirmingham').done(function(jsonData){console.log("Success")});
-
+/*
     $.ajax({
         type: 'GET',
         url: 'https://new.livestream.com/api/accounts/srcbirmingham',
         dataType: 'json',
         success: function(results) {
-            console.log("Success");
-            var image = results.past_events.data[1].logo.url;
-            console.log(image);
-            $('#video-list').prepend('<img src="'+image+'"/>');
-            //results.past_events.data.forEach(function(item) {
-            //    console.log(item.full_name);
-            //});
+            if(results) {
+                console.log("Success");
+                var image = results.past_events.data[1].logo.url;
+                console.log(image);
+                $('#video-list').prepend('<img src="' + image + '"/>');
+                //results.past_events.data.forEach(function(item) {
+                //    console.log(item.full_name);
+                //});
+            }else {
+                console.log("No Resutls");
+            }
         }
     });
-
+*/
     $(document).bind('touchstart', function (e){
         ts = e.originalEvent.touches[0].clientY;
-
+        console.log(ts);
         if(ts < 100) {
             $('#main-content').removeClass('disable-scrolling');
         }
@@ -74,7 +93,6 @@ $(document).ready(function() {
         if(del < -2){del = -2;}
         if(del > 0){del = 0;}
 
-        console.log(del);
         if(del <= -1) {
             if(del == -2) {
                 $('#footer').css('transform', 'translateY(-470px)').css('-webkit-transform', 'translateY(-470px)');;
@@ -106,24 +124,6 @@ $(document).ready(function() {
         // Firefox
         mainContent.addEventListener("DOMMouseScroll",scrollFunction, false);
     }
-    $('#btn').on('click', btnClicked);
-
-    function btnClicked() {
-        var position = $('#right').position();
-        if(position.left == 0) {
-            $('#menu').removeClass('fa-bars').addClass('fa-angle-double-right');
-            $('#right').css('display', 'block').css('transform', 'translate3d(100vw, 0, 0) translateX(-360px)').css('-webkit-transform', 'translate3d(100vw, 0, 0) translateX(-360px)');
-            $('#top').css('transform', 'translateX(-360px)').css('-webkit-transform', 'translateX(-360px)');
-        } else {
-            $('#menu').removeClass('fa-angle-double-right').addClass('fa-bars');
-            $('#top').css('transform', 'translateX(-0px)').css('-webkit-transform', 'translateX(-0px)');
-            setTimeout(
-                function() {
-                    $('#right').css('display', 'none');
-                    $('#right').css('transform', 'translate3d(100vw, 0, 0) translateX(0px)').css('-webkit-transform', 'translate3d(100vw, 0, 0) translateX(0px)');
-                }, 700);
-        }
-    }
 
     function scrollFunction(e) {
         $('#menu').removeClass('fa-angle-double-right').addClass('fa-bars');
@@ -136,7 +136,6 @@ $(document).ready(function() {
         if(del < -2){del = -2;}
         if(del > 0){del = 0;}
 
-        console.log(del);
         if(del <= -1) {
             if(del == -2) {
                 $('#footer').css('transform', 'translateY(-470px)').css('-webkit-transform', 'translateY(-470px)');;
