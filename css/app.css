@@ -5,6 +5,7 @@ html, body{
     padding: 0;
     background: #1B1B1B;
     display: block;
+    overflow-x: hidden;
 }
 
 #main-content {
@@ -107,6 +108,20 @@ html, body{
     color: white;
     padding-top: 40px;
     padding-left: 40px;
+    transition: .7s;
+}
+
+#menu-list {
+    list-style-type: none;
+    font-family: 'Open Sans';
+    font-variant: small-caps;
+    font-size: 20px;
+    line-height: 45px;
+    margin: 0 0 0 0;
+}
+
+#menu-list i {
+    margin-right: 10px;
 }
 
 #right {

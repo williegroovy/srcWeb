@@ -1,15 +1,29 @@
 function insideClose() {
     $('#menu').removeClass('fa-angle-double-right').addClass('fa-bars');
-    $('#right').css('transform', 'translate3d(100vw, 0, 0) translateX(0px)').css('-webkit-transform', 'translate3d(100vw, 0, 0) translateX(0px)');
     $('#top').css('transform', 'translateX(-0px)').css('-webkit-transform', 'translateX(-0px)');
+    setTimeout(
+        function() {
+            $('#right').css('display', 'none');
+            $('#right').css('transform', 'translate3d(100vw, 0, 0) translateX(0px)').css('-webkit-transform', 'translate3d(100vw, 0, 0) translateX(0px)');
+        }, 700);
 }
 
 $(document).ready(function() {
     var del = 0;
     var lastY;
-    var menuOpen = false;
-
     var ts;
+
+    //$.get('http://new.livestream.com/api/accounts/srcbirmingham').done(function(jsonData){console.log("Success")});
+
+    $.ajax({
+        type: 'GET',
+        url: 'https://new.livestream.com/api/accounts/srcbirmingham',
+        dataType: 'json',
+        success: function(results) {
+            console.log(results.past_events.data[0].full_name);
+        }
+    });
+
     $(document).bind('touchstart', function (e){
 
         ts = e.originalEvent.touches[0].clientY;
@@ -50,7 +64,7 @@ $(document).ready(function() {
     });
 
     function touchMove(delta) {
-
+        $('#menu').removeClass('fa-angle-double-right').addClass('fa-bars');
         del = del + delta;
 
         if(del < -2){del = -2;}
@@ -88,24 +102,28 @@ $(document).ready(function() {
         // Firefox
         mainContent.addEventListener("DOMMouseScroll",scrollFunction, false);
     }
-    $('#close-btn').on('click', btnClicked);
     $('#btn').on('click', btnClicked);
 
     function btnClicked() {
-        if(!menuOpen) {
-            menuOpen = true;
+        var position = $('#right').position();
+        if(position.left == 0) {
             $('#menu').removeClass('fa-bars').addClass('fa-angle-double-right');
             $('#right').css('display', 'block').css('transform', 'translate3d(100vw, 0, 0) translateX(-360px)').css('-webkit-transform', 'translate3d(100vw, 0, 0) translateX(-360px)');
             $('#top').css('transform', 'translateX(-360px)').css('-webkit-transform', 'translateX(-360px)');
         } else {
-            menuOpen = false;
             $('#menu').removeClass('fa-angle-double-right').addClass('fa-bars');
-            $('#right').css('transform', 'translate3d(100vw, 0, 0) translateX(0px)').css('-webkit-transform', 'translate3d(100vw, 0, 0) translateX(0px)');
-            $('#top').css('transform', 'translateX(0px)').css('-webkit-transform', 'translateX(0px)');
+            $('#top').css('transform', 'translateX(-0px)').css('-webkit-transform', 'translateX(-0px)');
+            setTimeout(
+                function() {
+                    $('#right').css('display', 'none');
+                    $('#right').css('transform', 'translate3d(100vw, 0, 0) translateX(0px)').css('-webkit-transform', 'translate3d(100vw, 0, 0) translateX(0px)');
+                }, 700);
         }
     }
 
     function scrollFunction(e) {
+        $('#menu').removeClass('fa-angle-double-right').addClass('fa-bars');
+
         var e = window.event || e;
         var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
         del = del + delta;
