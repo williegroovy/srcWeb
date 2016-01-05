@@ -98,7 +98,12 @@ html, body{
 }
 
 #top {
-    background: url(../img/src_worship_bg.jpg) no-repeat center center / cover fixed;
+    background: url(../img/src_worship_bg.jpg) no-repeat center center fixed;
+    float: left;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     height: 100%;
     width: 100%;
     transition: .7s;
@@ -159,6 +164,7 @@ html, body{
 }
 
 #right {
+    float: left;
     background: #262626;
     position: absolute;
     display: none;
@@ -212,17 +218,10 @@ html, body{
 
 @media (max-width: 650px) {
     #right {
-        background: #262626;
-        position: absolute;
-        display: none;
         width: 260px;
-        height: 100%;
         transform: translate3d(100vw, 0, 0) translateX(-260px);
         -webkit-transform: translate3d(100vw, 0, 0) translateX(-260px);
-        transition: .7s;
-        maring: 0 0 0 0;
     }
-
 
     .menu-container {
         float: left;
