@@ -12,6 +12,8 @@ html, body{
     height: 100%;
     width: 100%;
     overflow: hidden;
+    maring: 0 0 0 0;
+    padding: 0 0 0 0;
 }
 
 .container {
@@ -156,15 +158,15 @@ html, body{
     opacity: .75;
 }
 
-
 #right {
     background: #262626;
     position: absolute;
     display: none;
     width: 360px;
     height: 100%;
-    transform: translate3d(100vw, 0, 0) translateX(0px);
-    -webkit-transform: translate3d(100vw, 0, 0) translateX(0px);
+    margin: 0 0 0 0;
+    transform: translate3d(100vw, 0, 0) translateX(-360px);
+    -webkit-transform: translate3d(100vw, 0, 0) translateX(-360px);
     transition: .7s;
 }
 
@@ -206,6 +208,47 @@ html, body{
     text-decoration: none;
     color: #e1e1e1;
     cursor: pointer;
+}
+
+@media (max-width: 650px) {
+    #right {
+        background: #262626;
+        position: absolute;
+        display: none;
+        width: 260px;
+        height: 100%;
+        transform: translate3d(100vw, 0, 0) translateX(-260px);
+        -webkit-transform: translate3d(100vw, 0, 0) translateX(-260px);
+        transition: .7s;
+        maring: 0 0 0 0;
+    }
+
+
+    .menu-container {
+        float: left;
+        color: white;
+        padding-top: 0px;
+        padding-left: 0px;
+        transition: .7s;
+        transform: scale(.7, .7);
+        -webkit-transform: scale(.7, .7);
+    }
+
+    #menu-list {
+        list-style-type: none;
+        font-family: 'Open Sans';
+        font-variant: small-caps;
+        font-size: 20px;
+        line-height: 45px;
+    }
+
+    #close-btn {
+        padding-right: 10px;
+    }
+
+    .menu-container {
+
+    }
 }
 
 @media(min-width: 768px) {

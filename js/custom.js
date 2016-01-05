@@ -1,26 +1,18 @@
-function insideClose() {
-    $('#menu').removeClass('fa-angle-double-right').addClass('fa-bars');
-    $('#top').css('transform', 'translateX(-0px)').css('-webkit-transform', 'translateX(-0px)');
-    setTimeout(
-        function() {
-            $('#right').css('display', 'none');
-            $('#right').css('transform', 'translate3d(100vw, 0, 0) translateX(0px)').css('-webkit-transform', 'translate3d(100vw, 0, 0) translateX(0px)');
-        }, 700);
-}
-
 $(document).on("click", ".menu-button", function(){
+    console.log("click");
     var position = $('#right').position();
-    if(position.left == 0) {
+    var rightWidth = $('#right').width();
+    console.log(rightWidth);
+    if(!(position.left > 0)) {
         $('#menu').removeClass('fa-bars').addClass('fa-angle-double-right');
-        $('#right').css('display', 'block').css('transform', 'translate3d(100vw, 0, 0) translateX(-360px)').css('-webkit-transform', 'translate3d(100vw, 0, 0) translateX(-360px)');
-        $('#top').css('transform', 'translateX(-360px)').css('-webkit-transform', 'translateX(-360px)');
+        $('#right').css('display', 'block');
+        $('#top').css('transform', 'translateX(-' + rightWidth + 'px)').css('-webkit-transform', 'translateX(-' + rightWidth + 'px)');
     } else {
         $('#menu').removeClass('fa-angle-double-right').addClass('fa-bars');
         $('#top').css('transform', 'translateX(-0px)').css('-webkit-transform', 'translateX(-0px)');
         setTimeout(
             function() {
                 $('#right').css('display', 'none');
-                $('#right').css('transform', 'translate3d(100vw, 0, 0) translateX(0px)').css('-webkit-transform', 'translate3d(100vw, 0, 0) translateX(0px)');
             }, 700);
     }
 });
@@ -51,7 +43,6 @@ $(document).ready(function() {
 */
     $(document).bind('touchstart', function (e){
         ts = e.originalEvent.touches[0].clientY;
-        console.log(ts);
         if(ts < 100) {
             $('#main-content').removeClass('disable-scrolling');
         }
@@ -87,6 +78,7 @@ $(document).ready(function() {
     });
 
     function touchMove(delta) {
+        $('#right').css('display', 'none');
         $('#menu').removeClass('fa-angle-double-right').addClass('fa-bars');
         del = del + delta;
 
@@ -126,6 +118,7 @@ $(document).ready(function() {
     }
 
     function scrollFunction(e) {
+        $('#right').css('display', 'none');
         $('#menu').removeClass('fa-angle-double-right').addClass('fa-bars');
 
         var e = window.event || e;
