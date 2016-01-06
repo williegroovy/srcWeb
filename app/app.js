@@ -46,7 +46,7 @@
                             url: "/archive",
                                 views: {
                                     'top': {
-                                        templateUrl: "app/top.html"
+                                        templateUrl: "app/archiveTop.html"
                                     },
 
                                     'menu@archive': {

@@ -20,6 +20,11 @@ html, body{
     transition: opacity 1s ease-out;
 }
 
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 #close-btn {
     padding-top: 40px;
     padding-right: 40px;
@@ -83,7 +88,6 @@ html, body{
 }
 
 .navbar-brand {
-    margin-left: 150px;
     background: url('../img/s5_logo.png') no-repeat center center;
     width: 306px;
     height: 100px;
@@ -230,6 +234,11 @@ html, body{
         -webkit-transform: translate3d(100vw, 0, 0) translateX(-260px);
     }
 
+    #footer p {
+
+        font-size: 10px;
+    }
+
     .menu-container {
         padding-top: 0px;
         padding-left: 0px;
@@ -269,6 +278,12 @@ html, body{
         padding-left: 0px;
     }
 
+    .container-fluid {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     .navbar-brand {
         background: url('../img/s5_logo.png') no-repeat center center;
         width: 306px;
@@ -285,7 +300,7 @@ html, body{
     }
 }
 
-@media(min-width: 768px) {
+@media(min-width: 651px) {
     .navbar-header {
         float: none;
     }
