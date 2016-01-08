@@ -9,7 +9,8 @@
 
     app.config(["$stateProvider",
                 "$urlRouterProvider",
-                function($stateProvider, $urlRouterProvider) {
+                "$locationProvider",
+                function($stateProvider, $urlRouterProvider, $locationProvider) {
 
                     $urlRouterProvider.otherwise("/");
 
@@ -66,6 +67,8 @@
                                     }
                                 }
                         })
+
+                    $locationProvider.html5Mode(true);
                 }]
     );
 }());
