@@ -2,10 +2,10 @@
     "use strict"
     angular
         .module("pageManagement")
-        .controller("HomeCtrl",
-                    ["$scope", HomeCtrl]);
+        .controller("MainCtrl",
+        ["$scope", MainCtrl]);
 
-    function HomeCtrl() {
+    function MainCtrl() {
         var vm = this;
 
         vm.wakka = "wakka flakka";

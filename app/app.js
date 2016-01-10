@@ -21,8 +21,8 @@
                         url: "/",
                             views: {
                                 'top': {
-                                    templateUrl: "app/top.html",
-                                    controller: "HomeCtrl as vm"
+                                    templateUrl: "app/static/top.html",
+                                    controller: "MainCtrl as vm"
                                 },
 
                                 'menu@home': {
@@ -41,14 +41,15 @@
                                     templateUrl: "app/static/footer.html"
                                 }
                             },
-                            //controller: "HomeCtrl as vm"
+                            //controller: "MainCtrl as vm"
                     })
 
                         .state("archive", {
                             url: "/archive",
                                 views: {
                                     'top': {
-                                        templateUrl: "app/archiveTop.html"
+                                        templateUrl: "app/archive/archiveTop.html",
+                                        controller: "ArchiveCtrl as vm"
                                     },
 
                                     'menu@archive': {
