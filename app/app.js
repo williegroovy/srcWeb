@@ -21,7 +21,8 @@
                         url: "/",
                             views: {
                                 'top': {
-                                    templateUrl: "app/top.html"
+                                    templateUrl: "app/top.html",
+                                    controller: "HomeCtrl as vm"
                                 },
 
                                 'menu@home': {
@@ -39,8 +40,8 @@
                                 'footer': {
                                     templateUrl: "app/static/footer.html"
                                 }
-                            }
-
+                            },
+                            //controller: "HomeCtrl as vm"
                     })
 
                         .state("archive", {
