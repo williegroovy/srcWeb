@@ -1,5 +1,4 @@
 $(document).on("click", ".menu-button", function(){
-    console.log("click");
     var position = $('#right').position();
     var rightWidth = $('#right').width();
     console.log(rightWidth);
@@ -129,22 +128,29 @@ $(document).ready(function() {
         if(del < -2){del = -2;}
         if(del > 0){del = 0;}
 
+        var bottomHeight = $('#bottom').outerHeight();
+        var footerHeight = $('#footer').outerHeight();
+
         if(del <= -1) {
             if(del == -2) {
-                $('#footer').css('transform', 'translateY(-470px)').css('-webkit-transform', 'translateY(-470px)');;
-                $('#bottom').css('transform', 'translateY(-462px)').css('-webkit-transform', 'translateY(-462px)');
-                $('#top').css('transform', 'translateY(-262px)').css('-webkit-transform', 'translateY(-262px)');
+                $('#bottom').css('transform', 'translateY(-' + (bottomHeight + 62) + 'px)').css('-webkit-transform', 'translateY(-' + (bottomHeight + 62) + 'px)');
+                $('#footer').css('transform', 'translateY(-' + (bottomHeight + footerHeight) + 'px)').css('-webkit-transform', 'translateY(-' + (bottomHeight + footerHeight) + 'px)');
+                $('#top').css('transform', 'translateY(-' + (bottomHeight - 200) + 'px)').css('-webkit-transform', 'translateY(-' + (bottomHeight - 200) + 'px)');
+
+
 
             } else {
-                $('#footer').css('transform', 'translateY(-400px)').css('-webkit-transform', 'translateY(-400px)');
-                $('#bottom').css('transform', 'translateY(-400px)').css('-webkit-transform', 'translateY(-400px)');
-                $('#top').css('transform', 'translateY(-200px)').css('-webkit-transform', 'translateY(-200px)');
+                $('#bottom').css('transform', '-' + bottomHeight + 'px)').css('-webkit-transform', 'translateY(-' + bottomHeight + 'px)');
+                $('#footer').css('transform', 'translateY(-' + bottomHeight + 'px)').css('-webkit-transform', 'translateY(-' + bottomHeight + 'px)');
+                $('#top').css('transform', 'translateY(-' + (bottomHeight - 200) + 'px)').css('-webkit-transform', 'translateY(-' + (bottomHeight - 200) + 'px)');
+
+
             }
         } else {
             if(del == -1) {
-                $('#footer').css('transform', 'translateY(0px)').css('-webkit-transform', 'translateY(-4000px)');
-                $('#top').css('transform', 'translateY(-200px)').css('-webkit-transform', 'translateY(-200px)');
-                $('#bottom').css('transform', 'translateY(-400px)').css('-webkit-transform', 'translateY(-400px)');
+                $('#footer').css('transform', 'translateY(-' + footerHeight + 'px)').css('-webkit-transform', 'translateY(-' + footerHeight + 'px)');
+                $('#bottom').css('transform', '-' + (bottomHeight + 62) + 'px)').css('-webkit-transform', 'translateY(-' + (bottomHeight + 62) + 'px)');
+                $('#top').css('transform', 'translateY(-' + (bottomHeight - 200) + 'px)').css('-webkit-transform', 'translateY(-' + (bottomHeight - 200) + 'px)');
             }else {
                 $('#bottom').css('transform', 'translateY(0px)').css('-webkit-transform', 'translateY(0px)');
                 $('#top').css('transform', 'translateY(0px)').css('-webkit-transform', 'translateY(0px)');

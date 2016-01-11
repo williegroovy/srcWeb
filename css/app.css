@@ -200,6 +200,8 @@ html, body{
     border-right: none;
     border-bottom: none;
     transition: .7s;
+    transform: translate3d(0, 100vh, 0) translateY(-400px);
+    -webkit-transform: translate3d(0, 100vh, 0) translateY(-400px);
 }
 
 #footer {
@@ -209,6 +211,8 @@ html, body{
     height: auto;
     z-index: 10;
     transition: .7s;
+    transform: translate3d(0, 100vh, 0) translateY(-400px);
+    -webkit-transform: translate3d(0, 100vh, 0) translateY(-400px);
 }
 
 #footer p {
