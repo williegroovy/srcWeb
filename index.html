@@ -17,6 +17,7 @@
         <!-- Library Scripts -->
         <script src="js/jquery-1.11.3.min.js"></script>
         <script src="js/angular.min.js"></script>
+        <script src="js/angular-animate.min.js"></script>
         <script src="js/angular-resource.min.js"></script>
         <script src="js/angular-mocks.js"></script>
         <script src="js/angular-ui-router.min.js"></script>
@@ -44,8 +45,8 @@
 
     <body ng-app="pageManagement">
     <div id="main-content" class="disable-scrolling">
-        <div id="right" ui-view="right"></div>
-        <div id="top" ui-view="top"></div>
+        <div id="right" ui-view="right" ng-class="{'animate-right' : openRight}"></div>
+        <div id="top" ng-click="toggleRight()" ui-view="top" ng-class="{'animate-for-right' : openRight}"></div>
         <div id="bottom" ui-view="bottom" class="disable-scrolling"></div>
         <div id="footer" ui-view="footer" class="disable-scrolling"></div-->
     </div>

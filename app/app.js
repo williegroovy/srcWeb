@@ -22,26 +22,29 @@
                             views: {
                                 'top': {
                                     templateUrl: "app/static/top.html",
-                                    controller: "MainCtrl as vm"
+                                    controller: "MainCtrl"
                                 },
 
                                 'menu@home': {
-                                    templateUrl: "app/static/navbar.html"
+                                    templateUrl: "app/static/navbar.html",
+                                    controller: "MainCtrl"
                                 },
 
                                 'right': {
-                                    templateUrl: "app/static/right.html"
+                                    templateUrl: "app/static/right.html",
+                                    controller: "MainCtrl"
                                 },
 
                                 'bottom': {
-                                    templateUrl: "app/static/bottom.html"
+                                    templateUrl: "app/static/bottom.html",
+                                    controller: "MainCtrl"
                                 },
 
                                 'footer': {
-                                    templateUrl: "app/static/footer.html"
+                                    templateUrl: "app/static/footer.html",
+                                    controller: "MainCtrl"
                                 }
-                            },
-                            //controller: "MainCtrl as vm"
+                            }
                     })
 
                         .state("archive", {

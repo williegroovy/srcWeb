@@ -1,4 +1,4 @@
-$(document).on("click", ".menu-button", function(){
+/*$(document).on("click", ".menu-button", function(){
     var position = $('#right').position();
     var rightWidth = $('#right').width();
     console.log(rightWidth);
@@ -14,7 +14,7 @@ $(document).on("click", ".menu-button", function(){
                 $('#right').css('display', 'none');
             }, 700);
     }
-});
+});*/
 
 $(document).ready(function() {
     var del = 0;
