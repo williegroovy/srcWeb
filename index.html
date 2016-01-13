@@ -35,7 +35,7 @@
         <!-- Services -->
         <script src="common/services/common.services.js"></script>
         <script src="common/services/apiResource.js"></script>
-        <!--script src="common/services/groupResourceMock.js"></script-->
+        <script src="common/services/toggleService.js"></script>
 
         <!-- Product Controllers -->
         <script src="app/archive/archiveCtrl.js"></script>
@@ -45,10 +45,10 @@
 
     <body ng-app="pageManagement">
     <div id="main-content" class="disable-scrolling">
-        <div id="right" ui-view="right" ng-class="{'animate-right' : openRight}"></div>
-        <div id="top" ng-click="toggleRight()" ui-view="top" ng-class="{'animate-for-right' : openRight}"></div>
+        <div id="right" ui-view="right" ng-class="{'animate-right' : vm.getOpenRight}"></div>
+        <div id="top" ng-click="vm.toggleRight()" ui-view="top" ng-class="{'animate-for-right' : vm.getOpenRight}"></div>
         <div id="bottom" ui-view="bottom" class="disable-scrolling"></div>
-        <div id="footer" ui-view="footer" class="disable-scrolling"></div-->
+        <div id="footer" ui-view="footer" class="disable-scrolling"></div>
     </div>
     </body>
 </html>

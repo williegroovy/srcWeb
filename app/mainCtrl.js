@@ -5,12 +5,15 @@
         .controller("MainCtrl",
         ["$scope", "toggleRightService", MainCtrl]);
 
-    function MainCtrl($scope, toggleService) {
-        $scope.wakka = "wakka flakka";
+    function MainCtrl($scope, toggleRightService) {
+        var vm = this;
 
-        $scope.toggleRight = function() {
-            console.log("Toggle");
-            toggleService.toggle($scope.toggleRight);
+        vm.getOpenRight = toggleRightService.getOpenRight();
+
+        vm.wakka = "wakka flakka";
+
+        vm.toggleRight = function() {
+            toggleRightService.toggle();
         }
     }
 }());

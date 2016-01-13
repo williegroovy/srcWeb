@@ -2,7 +2,8 @@
     "use strict";
 
     var app = angular.module('pageManagement',
-                            [   "ui.router",
+                            [
+                                "ui.router",
                                 "ui.mask",
                                 "ui.bootstrap"
                             ]);
@@ -22,7 +23,7 @@
                             views: {
                                 'top': {
                                     templateUrl: "app/static/top.html",
-                                    controller: "MainCtrl"
+                                    controller: "MainCtrl as vm"
                                 },
 
                                 'menu@home': {
