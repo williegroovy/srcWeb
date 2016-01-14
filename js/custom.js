@@ -101,8 +101,10 @@ $(document).ready(function() {
                 $('#top').css('transform', 'translateY(-200px)').css('-webkit-transform', 'translateY(-200px)');
                 $('#bottom').css('transform', 'translateY(-400px)').css('-webkit-transform', 'translateY(-400px)');
             }else {
+                console.log("else");
                 $('#bottom').css('transform', 'translateY(0px)').css('-webkit-transform', 'translateY(0px)');
                 $('#top').css('transform', 'translateY(0px)').css('-webkit-transform', 'translateY(0px)');
+                $('#top').removeAttr("style");
             }
         }
     }
@@ -154,6 +156,7 @@ $(document).ready(function() {
             }else {
                 $('#bottom').css('transform', 'translateY(0px)').css('-webkit-transform', 'translateY(0px)');
                 $('#top').css('transform', 'translateY(0px)').css('-webkit-transform', 'translateY(0px)');
+                $('#top').removeAttr("style");
             }
         }
     }

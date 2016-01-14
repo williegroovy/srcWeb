@@ -45,8 +45,8 @@
 
     <body ng-app="pageManagement">
     <div id="main-content" class="disable-scrolling">
-        <div id="right" ui-view="right" ng-class="{'animate-right' : vm.getOpenRight}"></div>
-        <div id="top" ng-click="vm.toggleRight()" ui-view="top" ng-class="{'animate-for-right' : vm.getOpenRight}"></div>
+        <div id="right" ui-view="right" ng-class="{'animate-right' : openRight}"></div>
+        <div id="top" ng-click="vm.toggleRight()" ui-view="top" ng-class="{'animate-for-right' : openRight}"></div>
         <div id="bottom" ui-view="bottom" class="disable-scrolling"></div>
         <div id="footer" ui-view="footer" class="disable-scrolling"></div>
     </div>

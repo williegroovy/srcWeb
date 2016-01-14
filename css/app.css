@@ -135,7 +135,7 @@ html, body{
     -webkit-transform: translateX(-360px);
 }
 
-#right.animate-right {
+.animate-right {
     display: block;
 }
 .animate-right.ng-enter {

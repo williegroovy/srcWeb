@@ -3,19 +3,20 @@
 
     angular
         .module("pageManagement")
-        .service('toggleRightService', TRService);
+        .factory("toggleService", ToggleService);
 
-    function TRService() {
+    function ToggleService() {
 
-        this.openRight = false;
+        var toggle = {};
 
-        this.toggle = function() {
-            this.openRight =  !this.openRight;
+        toggle.openRight = false;
 
+        toggle.right = function() {
+            console.log(toggle.openRight);
+            toggle.openRight = !toggle.openRight;
+            console.log(toggle.openRight);
         }
 
-        this.getOpenRight = function() {
-            return this.openRight;
-        }
+        return toggle;
     }
 }());
