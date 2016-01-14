@@ -53,7 +53,7 @@
                                 views: {
                                     'top': {
                                         templateUrl: "app/archive/archiveTop.html",
-                                        controller: "MainCtrl as vm"
+                                        controller: "ArchiveCtrl as vm"
                                     },
 
                                     'menu@archive': {
@@ -64,6 +64,11 @@
                                     'right': {
                                         templateUrl: "app/static/right.html",
                                         controller: "MainCtrl as vm"
+                                    },
+
+                                    'content': {
+                                        templateUrl: "app/archive/archiveContent.html",
+                                        controller: "CarouselDemoCtrl"
                                     },
 
                                     'bottom': {

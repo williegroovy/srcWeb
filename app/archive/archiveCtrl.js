@@ -3,17 +3,20 @@
     angular
         .module("pageManagement")
         .controller("ArchiveCtrl",
-        ["$scope", "$http", "$sce", ArchiveCtrl]);
+        ["$scope", "$http", "$sce", "toggleData", "toggleManager", ArchiveCtrl]);
 
-    function ArchiveCtrl($scope, $http, $sce){
+    function ArchiveCtrl($scope, $http, $sce, toggleData, toggleManager){
         var vm = this;
 
         vm.wakka = "wakka flakka";
 
+        $scope.td = toggleData;
 
-        //fetch();
+        vm.toggleRight = toggleManager.toggleRight;
+
         vm.vidSRC = "http://livestream.com/accounts/603102/events/4675609/videos/108984239/player?autoPlay=false&height=360&mute=false&width=640"
         vm.vidUrl = $sce.trustAsResourceUrl(vm.vidSRC);
+        //fetch();
 
 
         function fetch() {

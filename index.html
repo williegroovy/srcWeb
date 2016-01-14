@@ -23,7 +23,7 @@
         <script src="js/angular-ui-router.min.js"></script>
         <script src="js/ui-utils.js"></script>
         <script src="js/toastr.js"></script>
-        <script src="js/ui-bootstrap-tpls-0.11.0.js"></script>
+        <script src="js/ui-bootstrap-tpls-1.0.3.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/angular-facebook.min.js"></script>
         <script src="js/mediaelement-and-player.min.js"></script>
@@ -40,6 +40,7 @@
         <!-- Product Controllers -->
         <script src="app/archive/archiveCtrl.js"></script>
         <script src="app/mainCtrl.js"></script>
+        <script src="app/carousel.js"></script>
 
     </head>
 
@@ -47,6 +48,7 @@
     <div id="main-content" class="disable-scrolling">
         <div id="right" ui-view="right" ng-class="{'animate-right' : td.openRight }"></div>
         <div id="top"  ui-view="top" ng-class="{'animate-for-right' : td.openRight }"></div>
+        <div id="content" ui-view="content"></div>
         <div id="bottom" ui-view="bottom" class="disable-scrolling"></div>
         <div id="footer" ui-view="footer" class="disable-scrolling"></div>
     </div>
