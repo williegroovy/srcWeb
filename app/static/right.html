@@ -1,7 +1,7 @@
 <div class="menu-container">
     <ul id="menu-list">
         <li><a ui-sref="home"><i class="fa fa-home"></i>Home</a></li>
-        <li><a ui-sref="archive"><i class="fa fa-television"></i>Watch Sermons</a></li>
+        <li><a ng-click="vm.toggleRight()" ui-sref="archive"><i class="fa fa-television"></i>Watch Sermons</a></li>
         <li><i class="fa fa-info-circle"></i>Learn More</li>
         <li><i class="fa fa-users"></i>Rock Groups</li>
         <li><i class="fa fa-book"></i>Solid Rock Academy</li>
@@ -9,4 +9,4 @@
         <li><img style="max-height:20px; width:auto; color:white; margin-right:10px;" src="./img/give_hands.png"/>Give</li>
     </ul>
 </div>
-<i id="close-btn"  ng-click="bool=false" class="fa fa-angle-double-right fa-2x menu-button"></i>
+<i id="close-btn"  ng-click="vm.toggleRight()" class="fa fa-angle-double-right fa-2x menu-button"></i>

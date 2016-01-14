@@ -3,21 +3,15 @@
     angular
         .module("pageManagement")
         .controller("MainCtrl",
-        ["$scope", "toggleService", MainCtrl]);
+        ["$scope", "toggleData", "toggleManager", MainCtrl]);
 
-    function MainCtrl($scope, toggleService) {
+    function MainCtrl($scope, toggleData, toggleManager) {
         var vm = this;
 
-        var ts = toggleService;
-
         vm.wakka = "wakka flakka";
-        vm.openRight = false;
-        $scope.openRight = false;
 
-        vm.toggleRight = function() {
-            toggleService.right();
-            vm.openRight = toggleService.openRight;
-            $scope.openRight = toggleService.openRight;
-        }
+        $scope.td = toggleData;
+
+        vm.toggleRight = toggleManager.toggleRight;
     }
 }());

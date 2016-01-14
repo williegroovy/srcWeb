@@ -1,8 +1,8 @@
 
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" ng-click="vm.toggleRight()" topDiv='animate-for-right'" class="pull-right menu-button" id="btn">
-                <p>MENU</p><i id="menu" class="fa fa-bars fa-2x"></i>
+            <button type="button" ng-click="vm.toggleRight()" class="pull-right menu-button" id="btn">
+                <p>MENU</p><i id="menu" ng-class="{'fa-angle-double-right' : td.openRight }" class="fa fa-bars fa-2x"></i>
             </button>
             <a class="navbar-brand" href="#">
                 <!--img id="nav-logo" src="img/s5_logo.png"-->

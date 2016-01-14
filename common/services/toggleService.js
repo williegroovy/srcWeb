@@ -3,20 +3,19 @@
 
     angular
         .module("pageManagement")
-        .factory("toggleService", ToggleService);
 
-    function ToggleService() {
+        .factory("toggleData", function() {
+            return {
+                openRight: false
+            };
+        })
 
-        var toggle = {};
-
-        toggle.openRight = false;
-
-        toggle.right = function() {
-            console.log(toggle.openRight);
-            toggle.openRight = !toggle.openRight;
-            console.log(toggle.openRight);
-        }
-
-        return toggle;
-    }
+        .factory("toggleManager", function(toggleData) {
+            return {
+                toggleRight: function() {
+                    toggleData.openRight = !toggleData.openRight;
+                    console.log(toggleData.openRight);
+                }
+            };
+        });
 }());

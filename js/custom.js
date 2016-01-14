@@ -119,8 +119,6 @@ $(document).ready(function() {
     }
 
     function scrollFunction(e) {
-        $('#right').css('display', 'none');
-        $('#menu').removeClass('fa-angle-double-right').addClass('fa-bars');
 
         var e = window.event || e;
         var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
