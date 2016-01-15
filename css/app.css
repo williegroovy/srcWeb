@@ -151,6 +151,43 @@ html, body{
 
 }
 
+#myCarousel {
+    width: 605px;
+    overflow: hidden;
+    margin: 0 auto;
+    color: black;
+    padding: 0;
+}
+
+a.carousel-control {
+    top: 45%;
+    left: 8px;
+    width: 40px;
+    height: 40px;
+    margin-top: 0px;
+    font-size: 48px;
+    font-weight: 100;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    background: #222;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+.carousel-caption h4 {
+    margin: 0;
+}
+
+.item.active:hover > .carousel-caption {
+    opacity: 0.8;
+}
+
+a.carousel-control.right {
+    right: 0px;
+}
+
 #top {
     background: url(../img/src_worship_bg.jpg) no-repeat center center fixed;
     float: left;
